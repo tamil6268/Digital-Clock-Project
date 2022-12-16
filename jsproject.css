@@ -5,8 +5,15 @@
 }
 .page{
     height:120vh;
-    width: 100vw;
+    width: 100%;
     background-color:#3D087B ;
+}
+@media screen and (max-width:1850){
+    .page{
+        height:100%;
+        width: 100%;
+        background-color:#3D087B ;
+    }
 }
 /* body{
     overflow: hidden;
@@ -51,26 +58,20 @@
 }
 .hover1{
     color: black;
-    background-color: white;
 }
-.hover1:hover{
-    color:aqua;
-    background-color: #DDF5FF;
+.border-options:hover{
+    color: red;
 }
-.line1{
-     position: absolute;
-     top: 240px;
-     left: 205px;
-}
-.line2{
-    position: absolute;
-     top: 345px;
-     left: 210px;
-}
-.line3{
-    position: absolute;
-     top: 450px;
-     left: 210px;
+.line{
+    height: 5px;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 13px;
+    left: 14px;
 }
 .border-options:hover{
     color: blue;
@@ -170,6 +171,7 @@
     font-size: 30px;
     font-weight: 900;
     color: #8A11BF;
+    z-index: 10;
 }
 .child1{
     font-size: x-large;
@@ -337,23 +339,25 @@
     .Left-container .box1 img{
         width: 260px;
         height: 90px;
-        margin-top: 50px;
-        margin-left: 5px;
+        margin-left: 30px;
+        position: relative;
+        top: 45px;
+        left: 10px;
     }  
     .Left-container span{
         display:inline-block;
         color:#A983D6;
         font-size: large;
-        position: absolute;
-        top: 55px;
-        left: 130px;
+        position:relative;
+        top: 45px;
+        left: 30px;
     } 
     .Left-container .box3,.box4,.box5,.box2{
         display: none;
     }
     .right-container{
         position: relative;
-        top:250px ;
+        top:280px ;
         left: 125px;
     }
     .child21,.child31{

@@ -1,3 +1,4 @@
+window.addEventListener("DOMContentLoaded",function(){
 //changing the selected timing by click and store in one place to view:
 const variousTime=document.querySelectorAll('#border');//getting time
 const wake=document.querySelector('.wake');//getting text 
@@ -6,6 +7,9 @@ const nap=document.querySelector('.nap');//getting text
 const night=document.querySelector('.night');//getting text 
 
 var applyText;
+var applyText1;
+var applyText2;
+var applyText3;
 
 function timeUpdate(){
    applyText=variousTime[0].value;
@@ -36,27 +40,6 @@ function leave(){ //creating the function
    Alarm.innerText="Set Alarm";
 }
 
-
-// alert(variousTime[].value);
-// let noChange1="10AM-11AM";
-// let noChange2="12PM-1PM";
-// let noChange3="4PM-5PM";
-// let noChange4="8PM-9PM";
-
-// function defaulttime(){
-//    option1.innerHTML=;
-//    alert(option1.value);
-// };
-
-// function defaulttime(){
-//    variousTime[0].value=noChange1;
-//    variousTime[1].value=noChange2;
-//    variousTime[2].value=noChange3;
-//    variousTime[3].value=noChange4;
-//   border1.innerText=noChange1;
-//   alert(noChange);
-// }
-
 //getting clock to run:
 
 const text=document.querySelector('#text');
@@ -70,9 +53,9 @@ function runClock(){
 
    var txt=text.innerHTML;
 
-   if(hrs>11){
-      // hrs=hrs-12;
+   if(hrs>12){
       txt="PM";
+      hrs=hrs-12;
    }
    else if(hrs===0){
       txt="AM";
@@ -108,22 +91,31 @@ const image=document.querySelectorAll('.child31');
 const img=document.createElement('img');
 
 
-function changeContent(){  
-   if(hrs>=4 && hrs<=11){
+function changeContent(){
+   var txt=text.innerHTML;
+   if(hrs>12){
+      txt="PM";
+      hrs=hrs-12;
+   }
+   else if(hrs===0){
+      txt="AM";
+   };
+   
+   if((hrs<12)&&(txt==="AM")){
       // content1.innerHTML="Morning";
       content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
       content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
       img.setAttribute('src','./wake.jpg');
       image[0].appendChild(img);
    }
-   else if(hrs>=12 && hrs<=15){
+   else if((hrs<4)&&(txt==="PM")){
       // content1.innerHTML="Lunch";
       content1.innerHTML="GOOD AFTERNOON !! TAKE SOME SLEEP";
       content2.innerHTML="LET'S HAVE SOME LUNCH !!";
       img.setAttribute('src','./noon.jpg ');
       image[0].appendChild(img);
     }
-    else if(hrs>=16 && hrs<=19){
+    else if((hrs<8)&&(txt==="PM")){
       // content1.innerHTML="Evening";
       content1.innerHTML=`GOOD EVENING !!`;
       content2.innerHTML=`STOP YAWNING,GET SOME TEA..<br> ITS JUST EVENING!`;
@@ -131,18 +123,34 @@ function changeContent(){
       img.setAttribute('src','./nap.jpg');
       image[0].appendChild(img);
     }
-    else if(hrs>=20 && hrs<=24){
+    else{
       // content1.innerHTML="Night";
       content1.innerHTML="GOOD NIGHT !!";
       content2.innerHTML="CLOSE YOUR EYES AND GO TO SLEEP";
       img.setAttribute('src','./night.jpg');
       image[0].appendChild(img);
     }
-    else{
-      content1.innerHTML="It's Mid Night...Don't Get Awake OopS!!!";
-    }
 }
 changeContent();
 
+// alert(variousTime[].value);
+// let noChange1="10AM-11AM";
+// let noChange2="12PM-1PM";
+// let noChange3="4PM-5PM";
+// let noChange4="8PM-9PM";
 
+// function defaulttime(){
+//    option1.innerHTML=;
+//    alert(option1.value);
+// };
 
+// function defaulttime(){
+//    variousTime[0].value=noChange1;
+//    variousTime[1].value=noChange2;
+//    variousTime[2].value=noChange3;
+//    variousTime[3].value=noChange4;
+//   border1.innerText=noChange1;
+//   alert(noChange);
+// }
+
+});
