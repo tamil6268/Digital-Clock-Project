@@ -132,25 +132,22 @@ function changeContent(){
     }
 }
 changeContent();
+setInterval(()=>{
+   changeContent();
+},1000)
 
-// alert(variousTime[].value);
-// let noChange1="10AM-11AM";
-// let noChange2="12PM-1PM";
-// let noChange3="4PM-5PM";
-// let noChange4="8PM-9PM";
-
+// const setalarm=document.getElementById('alarm');
+// var change1=setalarm[0].innerHTML;
+// var change2=setalarm[1].innerHTML;
+// var change3=setalarm[2].innerHTML;
+// var change4=setalarm[3].innerHTML;
 // function defaulttime(){
-//    option1.innerHTML=;
-//    alert(option1.value);
-// };
-
-// function defaulttime(){
-//    variousTime[0].value=noChange1;
-//    variousTime[1].value=noChange2;
-//    variousTime[2].value=noChange3;
-//    variousTime[3].value=noChange4;
-//   border1.innerText=noChange1;
-//   alert(noChange);
+//    alert(`${change1}<br>${change2}<br>${change3}<br>${change4}`);
+//    change1=variousTime[0].value;
+//    change2=variousTime[1].value;
+//    change3=variousTime[2].value;
+//    change4=variousTime[3].value;
+//    timeUpdate();
 // }
-
+// setalarm.addEventListener('click',defaulttime);
 });
