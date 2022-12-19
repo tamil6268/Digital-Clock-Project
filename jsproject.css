@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 .page{
-    height:120vh;
-    width: 100%;
+    height:165vh;
+    width: 140vw;
     background-color:#3D087B ;
 }
 @media screen and (max-width:1850){
@@ -333,8 +333,8 @@
 /*MEDIA QURIES*/
 @media screen and (max-width:1200px){
     .page{
-        height: 260vh;
-        width: 138vw;
+        height: 320vh;
+        width: 140vw;
     }
     .Left-container .box1 img{
         width: 260px;
@@ -374,5 +374,23 @@
     }
     .picture{
         display: flex;
+    }
+}
+@media screen and (max-width:1000px){
+    .page{
+        height:310vh;
+        width: 205vw;
+    }
+}
+@media screen and (max-width:800px){
+    .page{
+        height:320vh;
+        width: 220vw;
+    }
+}
+@media screen and (max-width:600px){
+    .page{
+        height:325vh;
+        width: 285vw;
     }
 }

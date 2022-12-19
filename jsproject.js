@@ -6,16 +6,11 @@ const lunch=document.querySelector('.lunch');//getting text
 const nap=document.querySelector('.nap');//getting text 
 const night=document.querySelector('.night');//getting text 
 
-var applyText;
-var applyText1;
-var applyText2;
-var applyText3;
-
 function timeUpdate(){
-   applyText=variousTime[0].value;
-   applyText1=variousTime[1].value;
-   applyText2=variousTime[2].value;
-   applyText3=variousTime[3].value;
+   let applyText=variousTime[0].value;
+   let applyText1=variousTime[1].value;
+   let applyText2=variousTime[2].value;
+   let applyText3=variousTime[3].value;
    wake.innerText=`Wake Up Time: ${applyText}`;
    lunch.innerText=`Lunch Time: ${applyText1}`;
    nap.innerText=`Nap Time: ${applyText2}`;
@@ -134,20 +129,5 @@ function changeContent(){
 changeContent();
 setInterval(()=>{
    changeContent();
-},1000)
-
-// const setalarm=document.getElementById('alarm');
-// var change1=setalarm[0].innerHTML;
-// var change2=setalarm[1].innerHTML;
-// var change3=setalarm[2].innerHTML;
-// var change4=setalarm[3].innerHTML;
-// function defaulttime(){
-//    alert(`${change1}<br>${change2}<br>${change3}<br>${change4}`);
-//    change1=variousTime[0].value;
-//    change2=variousTime[1].value;
-//    change3=variousTime[2].value;
-//    change4=variousTime[3].value;
-//    timeUpdate();
-// }
-// setalarm.addEventListener('click',defaulttime);
+},1000);
 });
