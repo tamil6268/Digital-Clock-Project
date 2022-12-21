@@ -14,6 +14,27 @@ function timeUpdate(){
    lunch.innerText=`Lunch Time: ${applyText1}`;
    nap.innerText=`Nap Time: ${applyText2}`;
    night.innerText=`Night Time: ${applyText3}`;
+
+   const content1=document.getElementById('morning');
+   const content2=document.getElementById('noon');
+   const image=document.querySelectorAll('.child31');
+
+   if(applyText==="10 AM - 11 AM"||applyText1==="10 AM - 11 AM"||applyText2==="10 AM - 11 AM"||applyText3==="10 AM - 11 AM"){
+      content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
+      content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
+   }
+   else if(applyText==="12 PM - 1 PM"||applyText1==="12 PM - 1 PM"||applyText2==="12 PM - 1 PM"||applyText3==="12 PM - 1 PM"){
+      content1.innerHTML="GOOD AFTERNOON !! TAKE SOME SLEEP";
+      content2.innerHTML="LET'S HAVE SOME LUNCH !!";
+   }
+   else if(applyText==="4 PM - 5 PM"||applyText1==="4 PM - 5 PM"||applyText2==="4 PM - 5 PM"||applyText3==="4 PM - 5 PM"){
+      content1.innerHTML=`GOOD EVENING !!`;
+      content2.innerHTML=`STOP YAWNING,GET SOME TEA..<br> ITS JUST EVENING!`;
+   }
+   else if(applyText==="8 PM - 9 PM"||applyText1==="8 PM - 9 PM"||applyText2==="8 PM - 9 PM"||applyText3==="8 PM - 9 PM"){
+      content1.innerHTML="GOOD NIGHT !!";
+      content2.innerHTML="CLOSE YOUR EYES AND GO TO SLEEP";
+   }
 }
 timeUpdate();
 
@@ -123,6 +144,3 @@ function changeContent(){
     }
 }
 changeContent();
-setInterval(()=>{
-   changeContent();
-},1000);
