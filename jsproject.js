@@ -1,4 +1,3 @@
-window.addEventListener("DOMContentLoaded",function(){
 //changing the selected timing by click and store in one place to view:
 const variousTime=document.querySelectorAll('#border');//getting time
 const wake=document.querySelector('.wake');//getting text 
@@ -18,11 +17,6 @@ function timeUpdate(){
 }
 timeUpdate();
 
-variousTime[0].addEventListener('change',timeUpdate);
-variousTime[1].addEventListener('change',timeUpdate);
-variousTime[2].addEventListener('change',timeUpdate);
-variousTime[3].addEventListener('change',timeUpdate);
-
 //set Alarm:(text change and addevent)
 
 const Alarm=document.getElementById('alarm');
@@ -34,6 +28,8 @@ Alarm.addEventListener('mouseleave',leave);//calling the function
 function leave(){ //creating the function
    Alarm.innerText="Set Alarm";
 }
+
+Alarm.addEventListener('click',timeUpdate);
 
 //getting clock to run:
 
@@ -78,7 +74,7 @@ setInterval(()=>{
    runClock();
 },1000)
 
-//getting content and changeing content:
+//getting content and changing content:
 
 const content1=document.getElementById('morning');
 const content2=document.getElementById('noon');
@@ -130,4 +126,3 @@ changeContent();
 setInterval(()=>{
    changeContent();
 },1000);
-});
