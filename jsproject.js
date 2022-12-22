@@ -1,4 +1,4 @@
-//changing the selected timing by click and store in one place to view:
+//changing the selected timing by click and store in one place to view as well as the image too:
 const variousTime=document.querySelectorAll('#border');//getting time
 const wake=document.querySelector('.wake');//getting text 
 const lunch=document.querySelector('.lunch');//getting text 
@@ -117,12 +117,12 @@ setInterval(()=>{
 },1000)
 
 
-//getting content and changing content:
+//getting content and changing content by running clock:
 
 const content1=document.getElementById('morning');
 const content2=document.getElementById('noon');
 const image=document.querySelectorAll('.child31');
-
+const img=document.getElementById('image');
 
 function changeContent(){
    var txt=text.innerHTML;
@@ -138,30 +138,34 @@ function changeContent(){
       // content1.innerHTML="Morning";
       content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
       content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
+      img.removeAttribute('src');
       img.setAttribute('src','./wake.jpg');
-      image[0].appendChild(img);
+      image[0].replace(img);
    }
    else if((hrs<4)&&(txt==="PM")){
       // content1.innerHTML="Lunch";
       content1.innerHTML="GOOD AFTERNOON !! TAKE SOME SLEEP";
       content2.innerHTML="LET'S HAVE SOME LUNCH !!";
-      img.setAttribute('src','./noon.jpg ');
-      image[0].appendChild(img);
+      img.removeAttribute('src');
+      img.setAttribute('src','./noon.jpg');
+      image[0].replace(img);
     }
     else if((hrs<8)&&(txt==="PM")){
       // content1.innerHTML="Evening";
       content1.innerHTML=`GOOD EVENING !!`;
       content2.innerHTML=`STOP YAWNING,GET SOME TEA..<br> ITS JUST EVENING!`;
       content2.style.fontSize="39px";
+      img.removeAttribute('src');
       img.setAttribute('src','./nap.jpg');
-      image[0].appendChild(img);
+      image[0].replace(img);
     }
     else{
       // content1.innerHTML="Night";
       content1.innerHTML="GOOD NIGHT !!";
       content2.innerHTML="CLOSE YOUR EYES AND GO TO SLEEP";
+      img.removeAttribute('src');
       img.setAttribute('src','./night.jpg');
-      image[0].appendChild(img);
+      image[0].replace(img);
     }
 }
 changeContent();
