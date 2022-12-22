@@ -18,22 +18,42 @@ function timeUpdate(){
    const content1=document.getElementById('morning');
    const content2=document.getElementById('noon');
    const image=document.querySelectorAll('.child31');
-
-   if(applyText==="10 AM - 11 AM"||applyText1==="10 AM - 11 AM"||applyText2==="10 AM - 11 AM"||applyText3==="10 AM - 11 AM"){
+   const img=document.getElementById('image');
+   
+   if((applyText=="10 AM - 11 AM"&&applyText1=="10 AM - 11 AM"&&applyText2=="10 AM - 11 AM"&&applyText3=="10 AM - 11 AM")||(applyText=="12 PM - 1 PM"&&applyText1=="12 PM - 1 PM"&&applyText2=="12 PM - 1 PM"&&applyText3=="12 PM - 1 PM")||(applyText=="4 PM - 5 PM"&&applyText1=="4 PM - 5 PM"&&applyText2=="4 PM - 5 PM"&&applyText3=="4 PM - 5 PM")||(applyText=="8 PM - 9 PM"&&applyText1=="8 PM - 9 PM"&&applyText2=="8 PM - 9 PM"&&applyText3=="8 PM - 9 PM")){
       content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
       content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
+      img.removeAttribute('src');
+      img.setAttribute('src','./wake.jpg');
+      image[0].replace(img);
    }
-   else if(applyText==="12 PM - 1 PM"||applyText1==="12 PM - 1 PM"||applyText2==="12 PM - 1 PM"||applyText3==="12 PM - 1 PM"){
+   else if(applyText=="10 AM - 11 AM"||applyText1=="10 AM - 11 AM"||applyText2=="10 AM - 11 AM"||applyText3=="10 AM - 11 AM"){
+      content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
+      content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
+      img.removeAttribute('src');
+      img.setAttribute('src','./wake.jpg');
+      image[0].replace(img);
+   }
+   else if(applyText=="12 PM - 1 PM"||applyText1=="12 PM - 1 PM"||applyText2=="12 PM - 1 PM"||applyText3=="12 PM - 1 PM"){
       content1.innerHTML="GOOD AFTERNOON !! TAKE SOME SLEEP";
       content2.innerHTML="LET'S HAVE SOME LUNCH !!";
+      img.removeAttribute('src');
+      img.setAttribute('src','./noon.jpg');
+      image[0].replace(img);
    }
-   else if(applyText==="4 PM - 5 PM"||applyText1==="4 PM - 5 PM"||applyText2==="4 PM - 5 PM"||applyText3==="4 PM - 5 PM"){
+   else if(applyText=="4 PM - 5 PM"||applyText1=="4 PM - 5 PM"||applyText2=="4 PM - 5 PM"||applyText3=="4 PM - 5 PM"){
       content1.innerHTML=`GOOD EVENING !!`;
       content2.innerHTML=`STOP YAWNING,GET SOME TEA..<br> ITS JUST EVENING!`;
+      img.removeAttribute('src');
+      img.setAttribute('src','./nap.jpg');
+      image[0].replace(img);
    }
-   else if(applyText==="8 PM - 9 PM"||applyText1==="8 PM - 9 PM"||applyText2==="8 PM - 9 PM"||applyText3==="8 PM - 9 PM"){
+   else if(applyText=="8 PM - 9 PM"||applyText1=="8 PM - 9 PM"||applyText2=="8 PM - 9 PM"||applyText3=="8 PM - 9 PM"){
       content1.innerHTML="GOOD NIGHT !!";
       content2.innerHTML="CLOSE YOUR EYES AND GO TO SLEEP";
+      img.removeAttribute('src');
+      img.setAttribute('src','./night.jpg');
+      image[0].replace(img);
    }
 }
 timeUpdate();
@@ -50,7 +70,8 @@ function leave(){ //creating the function
    Alarm.innerText="Set Alarm";
 }
 
-Alarm.addEventListener('click',timeUpdate);
+Alarm.addEventListener('click',timeUpdate);//calling the function to change content and image
+
 
 //getting clock to run:
 
@@ -95,12 +116,12 @@ setInterval(()=>{
    runClock();
 },1000)
 
+
 //getting content and changing content:
 
 const content1=document.getElementById('morning');
 const content2=document.getElementById('noon');
 const image=document.querySelectorAll('.child31');
-const img=document.createElement('img');
 
 
 function changeContent(){
