@@ -1,7 +1,7 @@
 //changing the selected timing by click and store in one place to view as well as the image too:
-const variousTime=document.querySelectorAll('#border');//getting time
-const wake=document.querySelector('.wake');//getting text 
-const lunch=document.querySelector('.lunch');//getting text 
+const variousTime=document.querySelectorAll('#border'); //getting time
+const wake=document.querySelector('.wake'); //getting text 
+const lunch=document.querySelector('.lunch'); //getting text 
 const nap=document.querySelector('.nap');//getting text 
 const night=document.querySelector('.night');//getting text 
 
@@ -99,15 +99,15 @@ function runClock(){
 
 const hour=document.querySelector('#hour');
 hour.innerHTML=`${hrs}<br>hours`;
-hour.style.fontSize="28px";
+hour.style.fontSize="20px";
 
 const minute=document.querySelector('#minute');
 minute.innerHTML=`${min}<br>mins`;
-minute.style.fontSize="28px";
+minute.style.fontSize="20px";
 
 const second=document.querySelector('#second');
 second.innerHTML=`${sec}<br>secs`;
-second.style.fontSize="28px";
+second.style.fontSize="20px";
 
 text.innerHTML=`${txt}`;
 }
