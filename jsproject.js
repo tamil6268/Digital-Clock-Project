@@ -14,41 +14,86 @@ function timeUpdate(){
    lunch.innerText=`Lunch Time: ${applyText1}`;
    nap.innerText=`Nap Time: ${applyText2}`;
    night.innerText=`Night Time: ${applyText3}`;
-
+   
    const content1=document.getElementById('morning');
    const content2=document.getElementById('noon');
    const image=document.querySelectorAll('.child31');
    const img=document.getElementById('image');
-   
-   if((applyText=="10 AM - 11 AM"&&applyText1=="10 AM - 11 AM"&&applyText2=="10 AM - 11 AM"&&applyText3=="10 AM - 11 AM")||(applyText=="12 PM - 1 PM"&&applyText1=="12 PM - 1 PM"&&applyText2=="12 PM - 1 PM"&&applyText3=="12 PM - 1 PM")||(applyText=="4 PM - 5 PM"&&applyText1=="4 PM - 5 PM"&&applyText2=="4 PM - 5 PM"&&applyText3=="4 PM - 5 PM")||(applyText=="8 PM - 9 PM"&&applyText1=="8 PM - 9 PM"&&applyText2=="8 PM - 9 PM"&&applyText3=="8 PM - 9 PM")){
+
+   if((applyText=="1 AM - 2 AM"||applyText1=="1 AM - 2 AM"||applyText2=="1 AM - 2 AM"||applyText3=="1 AM - 2 AM"||
+   applyText=="2 AM - 3 AM"||applyText1=="2 AM - 3 AM"||applyText2=="2 AM - 3 AM"||applyText3=="2 AM - 3 AM"||
+   applyText=="3 AM - 4 AM"||applyText1=="3 AM - 4 AM"||applyText2=="3 AM - 4 AM"||applyText3=="3 AM - 4 AM"||
+   applyText=="4 AM - 5 AM"||applyText1=="4 AM - 5 AM"||applyText2=="4 AM - 5 AM"||applyText3=="4 AM - 5 AM"||
+   applyText=="5 AM - 6 AM"||applyText1=="5 AM - 6 AM"||applyText2=="5 AM - 6 AM"||applyText3=="5 AM - 6 AM"||
+   applyText=="6 AM - 7 AM"||applyText1=="6 AM - 7 AM"||applyText2=="6 AM - 7 AM"||applyText3=="6 AM - 7 AM"||
+   applyText=="7 AM - 8 AM"||applyText1=="7 AM - 8 AM"||applyText2=="7 AM - 8 AM"||applyText3=="7 AM - 8 AM"||
+   applyText=="8 AM - 9 AM"||applyText1=="8 AM - 9 AM"||applyText2=="8 AM - 9 AM"||applyText3=="8 AM - 9 AM"||
+   applyText=="9 AM - 10 AM"||applyText1=="9 AM - 10 AM"||applyText2=="9 AM - 10 AM"||applyText3=="9 AM - 10 AM"||
+   applyText=="10 AM - 11 AM"||applyText1=="10 AM - 11 AM"||applyText2=="10 AM - 11 AM"||applyText3=="10 AM - 11 AM")
+   &&
+   (applyText=="11 AM - 12 PM"||applyText1=="11 AM - 12 PM"||applyText2=="11 AM - 12 PM"||applyText3=="11 AM - 12 PM"||applyText=="12 PM - 1 PM"||applyText1=="12 PM - 1 PM"||applyText2=="12 PM - 1 PM"||applyText3=="12 PM - 1 PM"||
+   applyText=="1 PM - 2 PM"||applyText1=="1 PM - 2 PM"||applyText2=="1 PM - 2 PM"||applyText3=="1 PM - 2 PM"||
+   applyText=="2 PM - 3 PM"||applyText1=="2 PM - 3 PM"||applyText2=="2 PM - 3 PM"||applyText3=="2 PM - 3 PM"||
+   applyText=="3 PM - 4 PM"||applyText1=="3 PM - 4 PM"||applyText2=="3 PM - 4 PM"||applyText3=="3 PM - 4 PM")
+   &&
+   (applyText=="4 PM - 5 PM"||applyText1=="4 PM - 5 PM"||applyText2=="4 PM - 5 PM"||applyText3=="4 PM - 5 PM"||
+   applyText=="5 PM - 6 PM"||applyText1=="5 PM - 6 PM"||applyText2=="5 PM - 6 PM"||applyText3=="5 PM - 6 PM"||
+   applyText=="6 PM - 7 PM"||applyText1=="6 PM - 7 PM"||applyText2=="6 PM - 7 PM"||applyText3=="6 PM - 7 PM"||
+   applyText=="7 PM - 8 PM"||applyText1=="7 PM - 8 PM"||applyText2=="7 PM - 8 PM"||applyText3=="7 PM - 8 PM")
+   &&
+   (applyText=="8 PM - 9 PM"||applyText1=="8 PM - 9 PM"||applyText2=="8 PM - 9 PM"||applyText3=="8 PM - 9 PM"||
+   applyText=="9 PM - 10 PM"||applyText1=="9 PM - 10 PM"||applyText2=="9 PM - 10 PM"||applyText3=="9 PM - 10 PM"||
+   applyText=="10 PM - 10 PM"||applyText1=="10 PM - 11 PM"||applyText2=="10 PM - 11 PM"||applyText3=="10 PM - 11 PM"||
+   applyText=="11 PM - 00 AM"||applyText1=="11 PM - 00 AM"||applyText2=="11 PM - 00 AM"||applyText3=="11 PM - 00 AM"||
+   applyText=="00 AM - 1 AM"||applyText1=="00 PM - 1 AM"||applyText2=="00 PM - 1 AM"||applyText3=="00 PM - 1 AM")){
       content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
       content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
       img.removeAttribute('src');
       img.setAttribute('src','./wake.jpg');
       image[0].replace(img);
    }
-   else if(applyText=="10 AM - 11 AM"||applyText1=="10 AM - 11 AM"||applyText2=="10 AM - 11 AM"||applyText3=="10 AM - 11 AM"){
+   else if(applyText=="1 AM - 2 AM"||applyText1=="1 AM - 2 AM"||applyText2=="1 AM - 2 AM"||applyText3=="1 AM - 2 AM"||
+   applyText=="2 AM - 3 AM"||applyText1=="2 AM - 3 AM"||applyText2=="2 AM - 3 AM"||applyText3=="2 AM - 3 AM"||
+   applyText=="3 AM - 4 AM"||applyText1=="3 AM - 4 AM"||applyText2=="3 AM - 4 AM"||applyText3=="3 AM - 4 AM"||
+   applyText=="4 AM - 5 AM"||applyText1=="4 AM - 5 AM"||applyText2=="4 AM - 5 AM"||applyText3=="4 AM - 5 AM"||
+   applyText=="5 AM - 6 AM"||applyText1=="5 AM - 6 AM"||applyText2=="5 AM - 6 AM"||applyText3=="5 AM - 6 AM"||
+   applyText=="6 AM - 7 AM"||applyText1=="6 AM - 7 AM"||applyText2=="6 AM - 7 AM"||applyText3=="6 AM - 7 AM"||
+   applyText=="7 AM - 8 AM"||applyText1=="7 AM - 8 AM"||applyText2=="7 AM - 8 AM"||applyText3=="7 AM - 8 AM"||
+   applyText=="8 AM - 9 AM"||applyText1=="8 AM - 9 AM"||applyText2=="8 AM - 9 AM"||applyText3=="8 AM - 9 AM"||
+   applyText=="9 AM - 10 AM"||applyText1=="9 AM - 10 AM"||applyText2=="9 AM - 10 AM"||applyText3=="9 AM - 10 AM"||
+   applyText=="10 AM - 11 AM"||applyText1=="10 AM - 11 AM"||applyText2=="10 AM - 11 AM"||applyText3=="10 AM - 11 AM"){
       content1.innerHTML=`GOOD MORNING!! WAKE UP !!`;
       content2.innerHTML="GRAB SOME HEALTHY BREAKFAST!!!";
       img.removeAttribute('src');
       img.setAttribute('src','./wake.jpg');
       image[0].replace(img);
    }
-   else if(applyText=="12 PM - 1 PM"||applyText1=="12 PM - 1 PM"||applyText2=="12 PM - 1 PM"||applyText3=="12 PM - 1 PM"){
+   else if(applyText=="11 AM - 12 PM"||applyText1=="11 AM - 12 PM"||applyText2=="11 AM - 12 PM"||applyText3=="11 AM - 12 PM"||
+   applyText=="12 PM - 1 PM"||applyText1=="12 PM - 1 PM"||applyText2=="12 PM - 1 PM"||applyText3=="12 PM - 1 PM"||
+   applyText=="1 PM - 2 PM"||applyText1=="1 PM - 2 PM"||applyText2=="1 PM - 2 PM"||applyText3=="1 PM - 2 PM"||
+   applyText=="2 PM - 3 PM"||applyText1=="2 PM - 3 PM"||applyText2=="2 PM - 3 PM"||applyText3=="2 PM - 3 PM"||
+   applyText=="3 PM - 4 PM"||applyText1=="3 PM - 4 PM"||applyText2=="3 PM - 4 PM"||applyText3=="3 PM - 4 PM"){
       content1.innerHTML="GOOD AFTERNOON !! TAKE SOME SLEEP";
       content2.innerHTML="LET'S HAVE SOME LUNCH !!";
       img.removeAttribute('src');
       img.setAttribute('src','./noon.jpg');
       image[0].replace(img);
    }
-   else if(applyText=="4 PM - 5 PM"||applyText1=="4 PM - 5 PM"||applyText2=="4 PM - 5 PM"||applyText3=="4 PM - 5 PM"){
+   else if(applyText=="4 PM - 5 PM"||applyText1=="4 PM - 5 PM"||applyText2=="4 PM - 5 PM"||applyText3=="4 PM - 5 PM"||
+   applyText=="5 PM - 6 PM"||applyText1=="5 PM - 6 PM"||applyText2=="5 PM - 6 PM"||applyText3=="5 PM - 6 PM"||
+   applyText=="6 PM - 7 PM"||applyText1=="6 PM - 7 PM"||applyText2=="6 PM - 7 PM"||applyText3=="6 PM - 7 PM"||
+   applyText=="7 PM - 8 PM"||applyText1=="7 PM - 8 PM"||applyText2=="7 PM - 8 PM"||applyText3=="7 PM - 8 PM"){
       content1.innerHTML=`GOOD EVENING !!`;
       content2.innerHTML=`STOP YAWNING,GET SOME TEA..<br> ITS JUST EVENING!`;
       img.removeAttribute('src');
       img.setAttribute('src','./nap.jpg');
       image[0].replace(img);
    }
-   else if(applyText=="8 PM - 9 PM"||applyText1=="8 PM - 9 PM"||applyText2=="8 PM - 9 PM"||applyText3=="8 PM - 9 PM"){
+   else if(applyText=="8 PM - 9 PM"||applyText1=="8 PM - 9 PM"||applyText2=="8 PM - 9 PM"||applyText3=="8 PM - 9 PM"||
+   applyText=="9 PM - 10 PM"||applyText1=="9 PM - 10 PM"||applyText2=="9 PM - 10 PM"||applyText3=="9 PM - 10 PM"||
+   applyText=="10 PM - 10 PM"||applyText1=="10 PM - 11 PM"||applyText2=="10 PM - 11 PM"||applyText3=="10 PM - 11 PM"||
+   applyText=="11 PM - 00 AM"||applyText1=="11 PM - 00 AM"||applyText2=="11 PM - 00 AM"||applyText3=="11 PM - 00 AM"||
+   applyText=="00 AM - 1 AM"||applyText1=="00 PM - 1 AM"||applyText2=="00 PM - 1 AM"||applyText3=="00 PM - 1 AM"){
       content1.innerHTML="GOOD NIGHT !!";
       content2.innerHTML="CLOSE YOUR EYES AND GO TO SLEEP";
       img.removeAttribute('src');
